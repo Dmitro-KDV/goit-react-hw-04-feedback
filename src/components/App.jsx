@@ -5,19 +5,19 @@ import {Notification} from 'components/Feedback/Notification';
 import { useState } from "react";
 
 export  const App = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setbad] = useState(0);
+    const [good, setGood] = useState(0);
+    const [neutral, setNeutral] = useState(0);
+    const [bad, setbad] = useState(0);
 
-  const handleClick = (option) => {
-    if (option === 'good') {
-      setGood(good + 1);
-    } else if (option === 'neutral') {
-      setNeutral(neutral + 1);
-    } else if (option === 'bad') {
-      setbad(bad + 1);
+    const handleClick = (option) => {
+      if (option === 'good') {
+        setGood(good + 1);
+      } else if (option === 'neutral') {
+        setNeutral(neutral + 1);
+      } else if (option === 'bad') {
+        setbad(bad + 1);
+      }
     }
-  }
     const total = good + neutral + bad;
     const positivePercentage = Math.round((good / total) * 100);
     let isShowStatistics = false;
